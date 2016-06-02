@@ -36,10 +36,6 @@ public class Ammo extends MovingThing
 	   return speed;
 	}
 
-	public void draw(Graphics window, Image image)
-	{
-		
-	}
 	public void draw( Graphics window )
 	{
 		window.setColor(Color.YELLOW);

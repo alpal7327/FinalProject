@@ -32,7 +32,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 
 	public OuterSpace()
 	{
-		setBackground(Color.WHITE);
+		setBackground(Color.black);
 
 		keys = new boolean[10];
 		dino1 = new Dino(400,400,3);
@@ -65,7 +65,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 
 		graphToBack.setColor(Color.BLUE);
 		graphToBack.drawString("StarFighter ", 25, 50 );
-		graphToBack.setColor(Color.WHITE);
+		graphToBack.setColor(Color.BLACK);
 		graphToBack.fillRect(0,0,800,600);
 
 		if(keys[0] == true && dino1.getX()>-25)
@@ -84,15 +84,6 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		if(keys[1] == true && dino1.getX()<750)
 		{
 			dino1.move("RIGHT");
-			try
-			{
-				dino1im = ImageIO.read(new File("src/fin/pusheenright.jpg"));
-			}
-			catch(Exception e)
-			{
-				//feel free to do something here
-				System.out.println("Houston we have a problem");
-			}
 		}
 		
 		if(keys[2] == true && dino1.getY()>0)
@@ -116,7 +107,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		if(dino1.getX()<=-20)
 			dino1.setX(740);
 
-		dino1.draw(graphToBack, dino1im);
+		dino1.draw(graphToBack);
 
 		for(Ammo s : shots)
 		{

@@ -2,7 +2,6 @@ package fin;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Image;
 
 public abstract class MovingThing implements Locatable
 {
@@ -51,7 +50,6 @@ public abstract class MovingThing implements Locatable
 	public abstract void setSpeed( int s );
 	public abstract int getSpeed();
 	public abstract void draw(Graphics window);
-	public abstract void draw(Graphics window, Image image);
 
 	public void move(String direction)
 	{
