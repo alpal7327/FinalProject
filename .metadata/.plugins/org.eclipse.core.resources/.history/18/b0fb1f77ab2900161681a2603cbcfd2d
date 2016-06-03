@@ -79,11 +79,11 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		graphToBack.fillRect(0,0,800,600);
 		
 		//clock
-		/*clock+=1;
+		clock+=1;
 		if(clock%10000==0)
 		{
 			
-		}*/
+		}
 		
 		//controls
 		if(keys[0] == true && dino1.getX()>-25)

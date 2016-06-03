@@ -59,10 +59,4 @@ public class Alien extends MovingThing
 	{
 		return "";
 	}
-
-	@Override
-	public void draw(Graphics window, Image image) {
-		// TODO Auto-generated method stub
-		
-	}
 }

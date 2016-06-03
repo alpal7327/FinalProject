@@ -9,26 +9,19 @@ import javax.imageio.ImageIO;
 public class Ammo extends MovingThing
 {
 	private int speed;
-	private String direction;
 
 	public Ammo()
 	{
-		this(0,0,0, "up");
+		this(0,0,0);
 	}
 
 	public Ammo(int x, int y)
 	{
-		this(x,y,0, "up");
+		this(x,y,0);
 	}
 
 	public Ammo(int x, int y, int s)
 	{
-		this(x,y,s, "up");
-	}
-	
-	public Ammo(int x, int y, int s, String dir)
-	{
-		direction = dir;
 		setPos(x,y);
 		setSpeed(s);
 	}
@@ -42,11 +35,6 @@ public class Ammo extends MovingThing
 	{
 	   return speed;
 	}
-	
-	public String getDirection()
-	{
-		return direction;
-	}
 
 	public void draw(Graphics window, Image image)
 	{
@@ -55,7 +43,7 @@ public class Ammo extends MovingThing
 	public void draw( Graphics window )
 	{
 		window.setColor(Color.YELLOW);
-		window.fillRect(getX(), getY(), 15, 15);
+		window.fillRect(getX(), getY(), 10, 10);
 	}
 
 	public String toString()
